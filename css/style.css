@@ -1068,10 +1068,6 @@ ul.location_icon li a:hover {
 }
 
 
-/** end footer **/
-
-
-
 .IconoChatBot img {
      position: fixed;
      /* Asegura que el ícono esté en la posición correcta */
@@ -1153,3 +1149,4 @@ ul.location_icon li a:hover {
      opacity: 1;
      visibility: visible;
 }
+
