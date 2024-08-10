@@ -35,6 +35,7 @@
 
 html {
      scroll-behavior: smooth;
+
 }
 
 body {
@@ -43,6 +44,8 @@ body {
      font-family: 'Poppins', sans-serif;
      line-height: 1.80857;
      font-weight: normal;
+
+
 }
 
 a {
@@ -71,6 +74,8 @@ h6 {
      color: #111111;
      margin: 0
 }
+
+
 
 h1 {
      font-size: 24px;
@@ -111,7 +116,7 @@ h4 a,
 h5 a,
 h6 a {
      color: #212121;
-     text-decoration: none!important;
+     text-decoration: none !important;
      opacity: 1
 }
 
@@ -156,7 +161,7 @@ img {
      height: auto;
 }
 
- :focus {
+:focus {
      outline: 0;
 }
 
@@ -1065,3 +1070,86 @@ ul.location_icon li a:hover {
 
 /** end footer **/
 
+
+
+.IconoChatBot img {
+     position: fixed;
+     /* Asegura que el ícono esté en la posición correcta */
+     bottom: 0;
+     /* Ajusta la posición desde la parte superior */
+     right: 0;
+     /* Ajusta la posición desde la parte izquierda */
+     border-radius: 50%;
+     /* Hace que la imagen sea circular */
+     width: 70px;
+     /* Establece el ancho del ícono */
+     height: 70px;
+     /* Establece la altura del ícono para mantenerlo cuadrado */
+     margin: 24px;
+     /* Espacio alrededor del ícono */
+     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+     /* Agrega una sombra suave */
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     /* Añade animación al pasar el ratón */
+     z-index: 99;
+}
+
+
+
+.IconoChatBot img {
+     position: fixed;
+     bottom: 0;
+     right: 0;
+     border-radius: 50%;
+     width: 70px;
+     height: 70px;
+     margin: 24px;
+     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+     transition: transform 0.3s ease, box-shadow 0.3s ease;
+     z-index: 99;
+}
+
+.IconoChatBot img:hover {
+     transform: scale(1.1);
+     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.IconoChatBot img:active {
+     transform: scale(0.95);
+     box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.IconoChatBot img:focus {
+     outline: 2px solid #007BFF;
+     outline-offset: 4px;
+}
+
+/* Tooltip styling */
+.IconoChatBot::after {
+     content: "¿Qué necesitas?";
+     /* El mensaje que se mostrará */
+     position: fixed;
+     bottom: 0;
+     right: 0;
+     margin: 35px;
+     /* Coloca el mensaje encima del ícono */
+
+     transform: translateX(-50%);
+     background-color: #333;
+     color: #fff;
+     padding: 8px 12px;
+     border-radius: 4px;
+     white-space: nowrap;
+     opacity: 0;
+     visibility: hidden;
+     transition: opacity 0.3s ease;
+     font-size: 14px;
+     pointer-events: none;
+     z-index: 99999;
+     /* El tooltip no interfiere con otros eventos del ratón */
+}
+
+.IconoChatBot:hover::after {
+     opacity: 1;
+     visibility: visible;
+}
