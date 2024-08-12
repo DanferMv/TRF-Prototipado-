@@ -34,8 +34,17 @@
 <!-- body -->
 
 <body class="main-layout">
+  
    <div class="IconoChatBot">
-      <img src="./images/IconoChatBot.webp" alt="IconoChatBot">
+      <img src="./images/IconoChatBot.webp" alt="IconoChatBot" id="chatbotIcon" >
+      <div id="chatbotModal" class="modal">
+         <div class="modal-content">
+            <span class="close">&times;</span>
+            <iframe
+               src='https://webchat.botframework.com/embed/danfer-bot?s=KknAepfYJ8U.ri8B2kzHzMHdQOPtGhE4daBEZW_Z3bkBY5mI7l5O2VM'
+               style='width: 100%; height: 100%;'></iframe>
+         </div>
+      </div>
    </div>
    <!-- loader  -->
    <div class="loader_bg">
@@ -684,7 +693,27 @@
          document.getElementById("mySidepanel").style.width = "0";
       }
    </script>
+<script>
+   document.addEventListener('DOMContentLoaded', function () {
+      var chatbotIcon = document.getElementById('chatbotIcon');
+      var modal = document.getElementById('chatbotModal');
+      var span = document.getElementsByClassName("close")[0];
 
+      chatbotIcon.onclick = function () {
+         modal.style.display = "block";
+      }
+
+      span.onclick = function () {
+         modal.style.display = "none";
+      }
+
+      window.onclick = function (event) {
+         if (event.target == modal) {
+            modal.style.display = "none";
+         }
+      }
+   });
+</script>
 
 </body>
 
